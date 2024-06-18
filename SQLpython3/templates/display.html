@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz Answers</title>
+</head>
+<body>
+    <center>
+        <h1>Quiz Answers</h1>
+    </center>
+    
+    <!-- Kini ang pamaagi para mag display ta og data gikan sa sql padulong satong html -->
+    <table border="10">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Answer 1</th>
+                <th>Answer 2</th>
+                <th>Answer 3</th>
+                <th>Answer 4</th>
+                <th>Answer 5</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td><a href="{{ url_for('delete', id=row[0]) }}">Delete</a></td>
+                <td><a href="{{ url_for('update', id=row[0]) }}">Update</a></td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <br>
+    <center><a href="{{ url_for('index') }}">Go back to Quiz</a></center>
+</body>
+</html>
+

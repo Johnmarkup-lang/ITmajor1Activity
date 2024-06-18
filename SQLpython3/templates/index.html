@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+    <center>
+        <h1>Answer Sheet</h1>
+    </center>
+    <form method="POST">
+    <br>
+    Q1. What is your name?
+    <input type="text" name="answer" placeholder="Answer This Box" required>
+    <br>
+    <br>
+    Q2. What is your birthday?
+    <input type="date" name="answer2" placeholder="Answer right here" required>
+    <br>
+    <br>
+    Q3. What is your favorite color?
+    <input type="text" name="answer3" placeholder="Answer right here" required>
+    <br>
+    <br>
+    Q4. Do you have a dog or a cat?
+    <input type="text" name="answer4" placeholder="Answer right here" required>
+    <br>
+    <br>
+    Q5. What's your favorite hobby?
+    <input type="text" name="answer5" placeholder="Answer right here" required>
+    <br>
+    <center><input type="submit" name="submit"></center>
+    </form>
+    <br>
+    <center><a href="{{ url_for('display') }}">Go back to Display</a></center>
+</body>
+</html>
